@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,600&display=swap');
+
+body {
+    margin: 0;
+    background-color: azure;
+}
+
+* {
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+}
+
+header h1 {
+    margin: 0;
+    padding: 1rem 6rem;
+    font-family: 'Poppins', Sans;
+}
+
+header {
+    background-color: lightgray;
+    border-bottom: 1px solid darkgrey;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    padding-left: 0;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ul li {
+    margin-bottom: 3rem;
+    list-style-type: none;
+    padding: 1rem;
+    margin: 0;
+}
+
+ul li:target {
+    background-color: rgb(46, 21, 21);
+}
+
+ul li a:hover,
+ul li:hover {
+    background-color: darkgray;
+    color: white;
+}
+
+
+.navbar {
+    background-color: lightgray;
+    display: block;
+    position: fixed;
+    left: -20rem;
+    transition: all 0.75s ease-in-out;
+    width: 20%;
+    margin: 0;
+    border-right: 1px solid darkgray;
+    text-align: center;
+}
+
+.navbar.is-active {
+    left: 0;
+}
+
+.header h1 {
+    font-size: 1rem;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+
+    justify-content: space-between;
+}
+
+#hamburger {
+    position: relative;
+    top: 1rem;
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    background: none;
+    appearance: none;
+    border: none;
+    margin-right: 1.5rem;
+    display: block;
+}
+
+#hamburger #bar,
+#hamburger:before,
+#hamburger:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+#hamburger.is-active:before {
+    transform: rotate(-45deg) translate(2px, 2px);
+    transition: 1s;
+}
+
+#hamburger.is-active:after {
+    transform: rotate(45deg) translate(-4px, -8px);
+}
+
+#hamburger.is-active #bar {
+    opacity: 0;
+}
+
+li a {
+    text-decoration: none;
+    transition: all ease-in-out 0.5s;
+    border-bottom: 1px solid transparent;
+}
+
+li a:hover {
+    border-color: black;
+}
+
+@media screen and (max-width: 736px) {
+    header h1 {
+        padding: 1rem 2rem;
+    }
+
+    .navbar {
+        width: 100%;
+        left: -44rem;
+    }
+}
+
+#home,
+#about,
+#work,
+#contact {
+    height: 100vh;
+}
+
+#home {
+    background-color: #ffe4e1;
+}
+
+#home h1,
+#about h1,
+#work h1,
+#contact h1 {
+    padding: 10rem 0 0 20rem;
+    margin: 0;
+}
+
+#about {
+    background-color: #ffcfc9;
+    margin: 0;
+}
+
+#work {
+    background-color: #ffb1a7;
+}
+
+#contact {
+    background-color: #ff8c7d;
+}
